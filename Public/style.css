@@ -1,0 +1,52 @@
+body {
+  background-color: #ecf0f1;
+}
+
+#container {
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+li {
+  font: 12px/20px 'Lucida Grande', Verdana, sans-serif;
+  color: #404040;
+  border: 1px solid #404040;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  background: white;
+  border-radius: 3px;
+  list-style: none;
+}
+
+h2, p {
+  margin-left: 10px;
+}
+
+#headers {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flatnote {
+  margin: 0 auto;
+  width: 380px;
+  padding: 25px 30px 25px 100px;
+  min-height: 50px;
+  line-height: 22px;
+
+}
+
+.flatnote > p {
+  font-size: 11px;
+  color: #666;
+}
+
+input[type='text'] {
+  margin-bottom: 10px;
+}
+
+input[type='submit'] {
+  /*margin-top: 10px;*/
+  margin-left: 172px;
+
+}
