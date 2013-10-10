@@ -7,6 +7,7 @@ gem 'pg'
 group :development, :test do 
 	gem 'rspec'
 	gem 'capybara'
+	gem 'shoulda-matchers'
 	gem 'shotgun'
 	gem 'faker'	
 	gem 'dotenv'
