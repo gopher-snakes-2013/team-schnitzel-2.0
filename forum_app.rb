@@ -29,5 +29,5 @@ end
 
 post '/post/:post_id' do
 	Comment.create(text_body: params[:text_body], post_id: params[:post_id])
-    redirect "/post/1"
+    redirect "/post/#{params[:post_id]}"
 end
