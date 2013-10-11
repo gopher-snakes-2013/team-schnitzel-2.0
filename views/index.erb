@@ -27,7 +27,7 @@
 			<ul class="flatnote">
 				<% @posts.each do |post| %>
 				<li>
-					<h2><%= post.title %></h2>
+					<h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
 					<br />
 					<p><%= post.text_body %></p>
 				</li>

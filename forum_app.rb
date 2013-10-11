@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/activerecord'
-require_relative 'models/post.rb'
+require_relative 'models/post'
+require_relative 'models/comment'
 
 begin 
   require 'dotenv'
@@ -18,4 +19,8 @@ end
 post '/' do
     Post.create(params.symbolize_keys)
     redirect '/'
+end
+
+get '/post/:post_id' do
+	erb :post
 end
