@@ -1,0 +1,28 @@
+<div>
+	<ul class="flatnote">
+		<li>
+			<h2><%= @post.title %></h2>
+			<p><%= @post.text_body %></p>
+			<ul class="flatnote">
+				<% @comments.each do |comment| %>
+				<li>
+					<p><%= comment.text_body %></p>
+				</li>
+				<% end %>
+			</ul>
+		</li>
+	</ul>
+	<br />
+	<form method="POST" action="/post/<%= @post.id %>">
+		<label>
+			Add a new comment:
+			<input type="text" name='text_body'>
+			</br>
+			<input type="submit">
+		</label>
+	</form>
+	<a href="/">Go back home</a>
+</div>
+
+
+

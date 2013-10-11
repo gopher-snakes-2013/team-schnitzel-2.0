@@ -1,38 +1,23 @@
-<head>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div id="container">
-	<div id='headers'>		
-		<h1>Umlaute, inc</h1>
-		<p>state your öpiniönz.</p>
+	<form method="POST" action='/'>
+		<label>
+			Add a new title:
+			<input type="text" name='title'>
+		</br>
+		Add a new post:
+		<input type="text" name='text_body'>
+	</br>
+	<input type="submit">
+</label>
+</form>
+</div>
 
-
-		<form method="POST" action='/'>
-			<label>
-				Add a new title:
-				<input type="text" name='title'>
-			</br>
-				Add a new post:
-				<input type="text" name='text_body'>
-			</br>
-				<input type="submit">
-			</label>
-		</form>
-	</div>
-
-		<br />
-		<br />
-		<div>
-			<ul class="flatnote">
-				<% @posts.each do |post| %>
-				<li>
-					<h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
-					<br />
-					<p><%= post.text_body %></p>
-				</li>
-				<% end %>
-			</ul>
-		</div>
-	</div>
-</body>
+<br />
+<br />
+<div>
+	<ul class="flatnote">
+		<% @posts.each do |post| %>
+		<li>
+			<h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
+		</li>
+		<% end %>
+	</ul>
